@@ -4,7 +4,6 @@ async function initializeApp() {
         const { salesData, searchData, combinedData } = await dataLoader.loadData();
 
         // Initialize visualizations
-        // These functions will be implemented in their respective modules
         initializeMap(salesData, searchData);
         initializePieCharts(salesData, searchData);
         initializeScatterPlot(combinedData);
