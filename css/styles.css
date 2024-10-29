@@ -1,0 +1,26 @@
+.tooltip {
+    position: absolute;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    pointer-events: none;
+    font-size: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.data-point {
+    transition: r 0.2s ease-in-out;
+}
+
+.data-point:hover {
+    r: 8;
+}
+
+.pie-slice {
+    transition: transform 0.2s ease-in-out;
+}
+
+.pie-slice:hover {
+    transform: scale(1.05);
+}

@@ -1,0 +1,61 @@
+<!-- npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch -->
+<!-- starts auto build -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retail Data Visualization Demo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/topojson.v3.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-50">
+    <header class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
+            <h1 class="text-3xl font-bold text-gray-900">Retail Analytics Dashboard</h1>
+            <p class="mt-1 text-sm text-gray-500">Combining Walmart sales data with TikTok search trends</p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        <!-- Map Visualization -->
+        <div class="bg-white rounded-lg shadow p-4 mb-6">
+            <h2 class="text-xl font-semibold mb-4">Geographic Distribution</h2>
+            <div id="map-visualization" class="h-[400px]"></div>
+        </div>
+
+        <!-- Pie Charts -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div class="bg-white rounded-lg shadow p-4">
+                <h2 class="text-xl font-semibold mb-4">Sales Distribution</h2>
+                <div id="sales-pie-chart"></div>
+            </div>
+            <div class="bg-white rounded-lg shadow p-4">
+                <h2 class="text-xl font-semibold mb-4">Search Trends Distribution</h2>
+                <div id="trends-pie-chart"></div>
+            </div>
+        </div>
+
+        <!-- Scatter Plot -->
+        <div class="bg-white rounded-lg shadow p-4">
+            <h2 class="text-xl font-semibold mb-4">Sales vs Search Trends</h2>
+            <div id="scatter-plot"></div>
+        </div>
+    </main>
+
+    <footer class="bg-white shadow-sm mt-8">
+        <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-sm text-gray-500">© 2024 Retail Analytics Demo</p>
+        </div>
+    </footer>
+
+    <script src="js/utils.js"></script>
+    <script src="js/dataLoader.js"></script>
+    <script src="js/mapVisualization.js"></script>
+    <script src="js/pieChart.js"></script>
+    <script src="js/scatterPlot.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
